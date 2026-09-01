@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>HeraldMcp.Server</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The hosting metapackage gives stdio + DI wiring. It does NOT pull
+         ASP.NET Core; the HTTP transport (ModelContextProtocol.AspNetCore)
+         stays out of v1 per PRD section 7.1. -->
+    <PackageReference Include="ModelContextProtocol" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0" />
+    <ProjectReference Include="..\HeraldMcp.Core\HeraldMcp.Core.csproj" />
+  </ItemGroup>
+
+</Project>

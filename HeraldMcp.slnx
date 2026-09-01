@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/HeraldMcp.Core/HeraldMcp.Core.csproj" />
+    <Project Path="src/HeraldMcp.Server/HeraldMcp.Server.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/HeraldMcp.Tests/HeraldMcp.Tests.csproj" />
+  </Folder>
+</Solution>

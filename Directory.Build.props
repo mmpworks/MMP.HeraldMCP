@@ -1,0 +1,18 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!--
+      Only the LIBRARY is AOT/trim-clean. The stdio SERVER uses the MCP
+      SDK's reflection-based tool discovery (WithToolsFromAssembly), which
+      is not trimmable; a stdio host is a one-time process spawn, so this
+      is accepted (PRD section 8 / docs/build-notes.md impediment 1). The
+      analyzers run on Core only, where they must stay green.
+    -->
+    <IsAotCompatible Condition="'$(MSBuildProjectName)' == 'HeraldMcp.Core'">true</IsAotCompatible>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+</Project>

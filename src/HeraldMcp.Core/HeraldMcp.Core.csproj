@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Herald.OSS" Version="0.14.0" />
+  </ItemGroup>
+
+</Project>
